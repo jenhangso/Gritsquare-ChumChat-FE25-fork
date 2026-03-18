@@ -4,15 +4,28 @@ export const RenderMessageBox = (sender, message) => {
     const ChatBox = document.createElement("div");
     ChatBox.className = "chat-box"
 
-    const ChatBoxSender = document.createElement("h1");
+    const ChatButtonDelete = document.createElement('button')
+    ChatButtonDelete.innerText = 'X'
+    ChatButtonDelete.classList = 'close-button'
+
+    const ChatboxImg = document.createElement('img')
+    ChatboxImg.className = 'header-picture'
+
+    const ChatBoxSender = document.createElement("h2");
     ChatBoxSender.textContent = sender;
+    ChatBoxSender.className = 'header-picture'
 
     const ChatBoxMessage = document.createElement("p");
     ChatBoxMessage.textContent = message;
+    ChatBoxMessage.className = 'comments-chat'
 
     const TimeStamp = document.createElement("p");
+    TimeStamp.classList = 'timestamp'
     TimeStamp.textContent = new Date();
 
-    ChatBox.append(ChatBoxSender, ChatBoxMessage, TimeStamp);
+    const comments = document.createElement('div')
+    comments.classList = 'actions'
+
+    ChatBox.append(ChatBoxSender, ChatBoxMessage, ChatButtonDelete, TimeStamp, comments);
     ChatContainer.appendChild(ChatBox);
 }
