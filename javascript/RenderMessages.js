@@ -14,7 +14,9 @@ export const RenderMessages = async(usersObject, messagesObject) => {
 
             if(userElement.id === messageElement.user_id){
                 console.log(`${userKey} wrote the message with ID ${messageKey}`)
-                RenderMessageBox(userElement, messagesObject.message)
+                // console.log(messageElement)
+                RenderMessageBox(userElement, messageElement, messageKey)
+                // console.log(messageKey)
             }
         }
     }

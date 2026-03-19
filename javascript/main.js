@@ -1,7 +1,8 @@
-import { db, messagesRef, repliesRef } from "./firebase.js";
+import { reference, db, messagesRef, repliesRef } from "./firebase.js";
 import { currentUser } from "./auth.js";
 import { push, set, onValue, remove, ref, get } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
 import { RenderMessageBox } from "./RenderMessageBox.js";
+import { RenderMessages } from "./RenderMessages.js"
 
 export const sendMessage = (text) => {
     if (!currentUser) return alert("Log in first dumbass!");
@@ -30,20 +31,32 @@ export const sendReply = (messageId, text) => {
     set(newReply, replyData);
 }
 
-onValue(messagesRef, snapshot => {
-    const messages = snapshot.val();
-    console.log(messages);
+onValue(reference, snapshot => {
+    const data = snapshot.val();
 
     document.querySelector(".chat-container").innerHTML = "";  
-    for (let id in messages) {
-        const msg = messages[id];
-        RenderMessageBox(currentUser, msg);  
-    }
 
-}, error => {
-    console.error("Firebase read failed:", error);
-    alert("Couldn't get messages from database.")
-});
+    const messages = data.messages;
+    const users = data.users;
+
+    RenderMessages(users, messages)
+    console.log(messages)
+})
+
+// onValue(messagesRef, snapshot => {
+//     const messages = snapshot.val();
+//     console.log(messages);
+
+//     document.querySelector(".chat-container").innerHTML = "";  
+//     for (let id in messages) {
+//         const msg = messages[id];
+//         RenderMessageBox(currentUser, msg);  
+//     }
+
+// }, error => {
+//     console.error("Firebase read failed:", error);
+//     alert("Couldn't get messages from database.")
+// });
 
 export const deleteMessage = async (messageId) => {
     await remove(ref(db, "messages/" + messageId));
@@ -58,6 +71,3 @@ export const deleteMessage = async (messageId) => {
         }
     }
 }
-
-//test
-RenderMessageBox("Eddie", "I hate my life");
