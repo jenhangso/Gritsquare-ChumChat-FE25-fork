@@ -12,11 +12,11 @@ export const RenderMessageBox = (sender, message) => {
     ChatboxImg.className = 'header-picture'
 
     const ChatBoxSender = document.createElement("h2");
-    ChatBoxSender.textContent = sender;
+    ChatBoxSender.textContent = sender.username;
     ChatBoxSender.className = 'header-picture'
 
     const ChatBoxMessage = document.createElement("p");
-    ChatBoxMessage.textContent = message;
+    ChatBoxMessage.textContent = message.message;
     ChatBoxMessage.className = 'comments-chat'
 
     const TimeStamp = document.createElement("p");
