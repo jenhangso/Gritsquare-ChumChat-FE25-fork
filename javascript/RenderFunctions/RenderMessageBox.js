@@ -15,7 +15,13 @@ export const RenderMessageBox = (sender, message, messageKey) => {
     ChatboxImg.className = 'profile-picture'
     ChatboxImg.src = sender.img;
 
-    ChatBox.append(ChatBoxSender, ChatboxImg)
+    const UserInfo = document.createElement("section")
+    UserInfo.className = "chat-user-info"
+
+
+    UserInfo.append(ChatBoxSender, ChatboxImg)
+
+    ChatBox.append(UserInfo)
 
     if(currentUser){
         if(currentUser.id === message.user_id){
