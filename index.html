@@ -1,69 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/icon/ChumChatLogotyp.ico" type="image/x-icon">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <!-- Google fonts end -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="style/style.css">
-    <!-- CSS ENDS -->
-    <title>Chumchat</title>
-    <script src="./javascript/main.js" type="module"></script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="img/icon/ChumChatLogotyp.ico"
+            type="image/x-icon"
+        />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Google fonts end -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="style/style.css" />
+        <!-- CSS ENDS -->
+        <title>Chumchat</title>
+        <script src="./javascript/main.js" type="module"></script>
+    </head>
 
-<body>
-    <nav>
-       <a href="index.html"><img src="img/ChumChatLogotyp.png" class="logo" alt="loga för Chumchat"></a> 
-        <div class="hamburger" id="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-  
-        <ul class="menu">
-             <button id="darkmodeButton">Toggle Dark Mode</button>
-             <a href="#about">ROM1</a>
-            <a href="#services">MEMES</a>
-            <li id="user-area"></li>
-        </ul>
-    </nav>
+    <body>
+        <nav>
+            <a href="index.html"
+                ><img
+                    src="img/ChumChatLogotyp.png"
+                    class="logo"
+                    alt="loga för Chumchat"
+            /></a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
-    <main class="main" id="main">
-        <div class="sidenav" id="sidenav">
-           
-        </div>
+            <ul class="menu">
+                <button id="darkmodeButton">Toggle Dark Mode</button>
+                <a href="#about">ROM1</a>
+                <a href="#services">MEMES</a>
+                <li id="user-area"></li>
+            </ul>
+        </nav>
 
-         <div class="content">
+        <main class="main" id="main">
+            <div class="sidenav" id="sidenav"></div>
 
-    <div class="send-chat-container">
-      <form class="send-message" id="form-post">
-        <input placeholder="Skriv ett meddelande..." type="text" class="message-area">
-        <button type="submit" class="chat-send-button">Send</button>
-      </form>
-    </div>
-     
-      
-       
-        <div class="chat-container"></div>
-  </div>
-    </main>
+            <div class="content">
+                <div class="send-chat-container">
+                    <form class="send-message" id="form-post">
+                        <input
+                            placeholder="Skriv ett meddelande..."
+                            type="text"
+                            name="message"
+                            class="message-area"
+                        />
+                        <button type="submit" class="chat-send-button">
+                            Send
+                        </button>
+                    </form>
+                </div>
 
-    <footer class="footer">
-        <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </footer>
-    <script type="module" src="javascript/main.js"></script>
-    <script type="module" src="javascript/function/darkmode.js"></script>
-    <script type="module" src="javascript/function/hamburgermeny.js"></script>
-</body>
- 
+                <div class="chat-container"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </footer>
+        <script type="module" src="javascript/main.js"></script>
+        <script type="module" src="javascript/function/darkmode.js"></script>
+        <script
+            type="module"
+            src="javascript/function/hamburgermeny.js"
+        ></script>
+        <script type="module" src="./javascript/MessageFunctions/sendMessage.js"></script>
+    </body>
 </html>
