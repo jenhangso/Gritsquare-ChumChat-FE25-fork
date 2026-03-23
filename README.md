@@ -57,7 +57,7 @@ A simple real-time chat application where users can send messages to each other.
 
 We welcome contributions! To keep the project organized, please follow these steps:
 
-1. **Read the README carefully** to understand the project structure, features, and guidelines.
+1. **Read the README/CONTRIBUTING carefully** to understand the project structure, features, and guidelines.
 2. **Fork the repository** and create a new branch for your work:
 
    ```bash
