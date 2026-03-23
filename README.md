@@ -16,8 +16,8 @@ A simple real-time chat application where users can send messages to each other.
 
 ## Design & Color Palette
 
-| Preview                                                         | Hex       | Usage                         |
-| --------------------------------------------------------------- | --------- | ----------------------------- |
+| Preview                                                         | Hex       |
+| --------------------------------------------------------------- | --------- |
 | ![Primary Green](https://img.shields.io/badge/Primary%20Green-00A86B?style=for-the-badge) | `#00A86B`|
 | ![#000000](https://img.shields.io/badge/Black-000000?style=for-the-badge) | `#000000` |    
 | ![#F2EAE0](https://img.shields.io/badge/SoftAlmond-F2EAE0?style=for-the-badge) | `#F2EAE0` |      
