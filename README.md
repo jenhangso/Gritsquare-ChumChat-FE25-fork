@@ -25,8 +25,9 @@ A simple real-time chat application where users can send messages to each other.
 
 
 # Typography Scale
+## Inter sans-serif
 
-| Level | Size (px / rem) | Weight  | Example Text           |
+| Level | Size (px / rem) | Weight  | Font: Inter sans-serif|
 |-------|-----------------|---------|-----------------------|
 | 1     | 48–60 px / 1.5→2.5 rem | Regular | TYPOGRAPHY SCALE |
 | 2     | 24–35 px / 1.5→2 rem   | Regular | Typography Scale  |
