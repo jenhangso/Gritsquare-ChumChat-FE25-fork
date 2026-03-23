@@ -3,8 +3,11 @@ import { push, set, onValue, remove, ref, get } from "https://www.gstatic.com/fi
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 import { RenderNav } from "./RenderFunctions/RenderNav.js";
 import { RenderMessages } from "./RenderFunctions/RenderMessages.js"
+import { renderWeatherData } from "./RenderFunctions/RenderWeatherData.js";
 
 RenderNav();
+
+renderWeatherData();
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -17,7 +20,7 @@ onAuthStateChanged(auth, (user) => {
 onValue(reference, snapshot => {
     const data = snapshot.val();
 
-    document.querySelector(".chat-container").innerHTML = "";  
+    document.querySelector(".chat-container").innerHTML = "";
 
     const messages = data.messages;
     const users = data.users;
